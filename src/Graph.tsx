@@ -29,7 +29,7 @@ class Graph extends Component<IProps, {}> {
       price_def: 'float',
       ratio: 'float',
       timestamp: 'date',
-      uper_bound: 'float',
+      upper_bound: 'float',
       lower_bound: 'float',
       trigger_alert: 'float',
     };
@@ -48,7 +48,7 @@ class Graph extends Component<IProps, {}> {
         price_def: 'avg',
         ratio: 'avg',
         timestamp: 'distinct count',
-        uper_bound: 'avg',
+        upper_bound: 'avg',
         lower_bound: 'avg',
         trigger_alert: 'avg',
       }));
