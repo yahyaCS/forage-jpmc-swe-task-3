@@ -3,6 +3,8 @@ import { Table } from '@finos/perspective';
 import { ServerRespond } from './DataStreamer';
 import { DataManipulator } from './DataManipulator';
 import './Graph.css';
+import { TableData } from '@finos/perspective';
+
 
 interface IProps {
   data: ServerRespond[],
@@ -55,9 +57,9 @@ class Graph extends Component<IProps, {}> {
 
   componentDidUpdate() {
     if (this.table) {
-      this.table.update(
-        DataManipulator.generateRow(this.props.data),
-      );
+        this.table.update([
+            DataManipulator.generateRow(this.props.data),
+        ] as unknown as TableData);
     }
   }
 }
